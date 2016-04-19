@@ -1,15 +1,36 @@
+.carousel-inner {
+  margin-top: 50px;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.12);
+  .item{
+  }
+
+}
  .carousel-content{
    background-color: $bg-color;
-   color: $primary-color;
-   h1 {
-     color: $secondary-color;
+   color: $text-color;
+   padding: 20px 60px 40px 60px;
+   border-radius: 4px;
+   border: 1px solid $bg-darker;
+   min-height: 500px;
+   width: 100%;
+   &:hover{
+     p{
+     }
    }
    div.desc{
+     display: block;
      width: 40%;
    }
-   width: 100%;
-   min-height: 400px;
-   padding: 20px 60px;
+   div.figure {
+     display: block;
+     float: right;
+     width: 50%;
+     img {
+       width: 100%;
+       max-height: 330px;
+       margin-top: 40px;
+     }
+   }
  }
 
 #carousel-home a.carousel-control {
