@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body {
+  padding-top: 50px;
+  background-color: #3D3B45;
+  font-family: 'Open Sans', sans-serif; }
+
+.carousel-content {
+  background-color: #3D3B45;
+  color: #FBE78B;
+  width: 100%;
+  min-height: 400px;
+  padding: 20px 60px; }
+  .carousel-content h1 {
+    color: #F58758; }
+  .carousel-content div.desc {
+    width: 40%; }
+
+#carousel-home a.carousel-control {
+  background-image: none; }
+  #carousel-home a.carousel-control.left span {
+    left: 10px; }
+  #carousel-home a.carousel-control.right span {
+    right: 10px; }
+
+.carousel-indicators li {
+  border: 1px solid #F58758; }
+  .carousel-indicators li.active {
+    background-color: #F58758; }

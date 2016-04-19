@@ -1,0 +1,30 @@
+ .carousel-content{
+   background-color: $bg-color;
+   color: $primary-color;
+   h1 {
+     color: $secondary-color;
+   }
+   div.desc{
+     width: 40%;
+   }
+   width: 100%;
+   min-height: 400px;
+   padding: 20px 60px;
+ }
+
+#carousel-home a.carousel-control {
+  background-image: none ;
+  &.left span {
+    left: 10px;
+  }
+  &.right span {
+    right: 10px;
+  }
+}
+
+.carousel-indicators li {
+  border: 1px solid $secondary-color;
+  &.active {
+    background-color: $secondary-color;
+  }
+}
