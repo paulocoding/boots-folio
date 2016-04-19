@@ -1,16 +1,22 @@
 html {
   background-color: $bg-dark;
-  background-image: linear-gradient(to top, rgba(0,1,64,1) ,rgba(49,48,56, 0) );
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center bottom;
   color: $text-color;
   font-family: 'Open Sans', sans-serif;
+  height: 100%;
 }
-
+::selection {
+  background: $secondary-color;
+  color: $text-active;
+}
 body{
     background-color: $bg-dark;
+    background-image: url("../img/layout/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
     padding-top: 70px;
+    min-height: 100%;
 }
 p {
   font-family: 'Lato', sans-serif;
@@ -35,23 +41,26 @@ div.under-title{
   margin-top: -8px;
 }
 
+// footer menu
 footer {
   display: block;
   position: fixed;
   bottom: 0;
-  background-color: $bg-color;
+  background-color: $bg-darker;
   border: 1px solid $bg-darker;
   width: 100%;
-  padding: 10px;
+  padding: 8px 0 6px 0;
   text-align: center;
+  color: $text-color;
   ul {
     list-style: none;
     display: inline;
     li{
+      font-size: 1.2em;
       display: inline;
       img{
-        height: 24px;
-        padding: 0 20px;
+        height: 22px;
+        padding: 0 25px;
         opacity: 1;
         &:hover{
           opacity: .7;
@@ -61,6 +70,11 @@ footer {
   }
 }
 
+.shadow{
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.5);
+}
+
+// navbar restyling
 .navbar.navbar-inverse{
   border: 1px solid $bg-darker;
   background-color: $bg-dark;
@@ -78,11 +92,11 @@ ul.nav.navbar-nav{
       background-color: $bg-dark;
       border-bottom: 4px solid $active-color;
       &:hover, &:visited{
-        background-color: $bg-dark;
+        background-color: $bg-darker;
       }
   }
   li a:hover {
-    background-color: $bg-dark;
+    background-color: $bg-darker;
     border-bottom: 4px solid $primary-color;
     color: $text-active;
     transition: border 100ms;
