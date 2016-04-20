@@ -65,9 +65,14 @@ footer {
       footer ul li img {
         height: 22px;
         padding: 0 25px;
-        opacity: 1; }
+        opacity: 0.8; }
         footer ul li img:hover {
-          opacity: .7; }
+          opacity: .5; }
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 .mybox {
   display: block;
@@ -84,6 +89,60 @@ footer {
 .shadow {
   -webkit-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.5); }
+
+.gallery {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.thumb {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 25%; }
+  .thumb img {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; }
+  .thumb:hover img {
+    -webkit-transform: scale(1.15);
+        -ms-transform: scale(1.15);
+            transform: scale(1.15); }
+  .thumb .thumb-over {
+    display: block;
+    background-color: rgba(229, 120, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 20px 5px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    opacity: 0;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; }
+    .thumb .thumb-over:hover {
+      opacity: 1; }
+    .thumb .thumb-over a {
+      display: block;
+      width: 40%;
+      margin: 40px auto 0 auto;
+      padding: 4px;
+      background-color: #E57800;
+      border: 2px solid #fff;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.2em; }
+      .thumb .thumb-over a:hover {
+        background-color: #fff;
+        border: 2px solid #fff;
+        color: #E57800; }
 
 .navbar.navbar-inverse {
   border: 1px solid #373844;
@@ -108,9 +167,21 @@ ul.nav.navbar-nav {
     -webkit-transition: border 100ms;
     transition: border 100ms; }
 
+@media only screen and (max-width: 992px) {
+  .thumb {
+    width: 33.3333%; } }
+
 @media only screen and (max-width: 720px) {
   .mybox {
     padding: 20px 30px 10px 30px; } }
+
+@media only screen and (max-width: 600px) {
+  .thumb {
+    width: 50%; } }
+
+@media only screen and (max-width: 380px) {
+  .thumb {
+    width: 100%; } }
 
 .carousel-inner {
   margin-top: 10px;
@@ -121,10 +192,9 @@ ul.nav.navbar-nav {
 .carousel-content {
   background-color: rgba(55, 56, 68, 0.5);
   color: #a6a9b7;
-  padding: 20px 60px 40px 60px;
+  padding: 20px 60px 60px 60px;
   -webkit-border-radius: 4px;
           border-radius: 4px;
-  min-height: 460px;
   width: 100%; }
   .carousel-content div.desc {
     display: block;
