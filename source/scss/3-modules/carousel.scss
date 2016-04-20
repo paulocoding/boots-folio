@@ -1,5 +1,5 @@
 .carousel-inner {
-  margin-top: 30px;
+  margin-top: 10px;
   border-radius: 4px;
   border: 1px solid $bg-darker;
 }
@@ -8,7 +8,7 @@
  color: $text-color;
  padding: 20px 60px 40px 60px;
  border-radius: 4px;
- min-height: 500px;
+ min-height: 460px;
  width: 100%;
  div.desc{
    display: block;
@@ -45,7 +45,6 @@
 
 @media only screen and (max-width: 720px) {
   .carousel-content{
-   padding: 20px 60px 40px 60px;
    div.desc{
      width: 100%;
    }
@@ -53,6 +52,9 @@
      float: left;
      width: 100%;
      margin-bottom: 20px;
+     img {
+       margin-top: 5px;
+     }
    }
   }
 }
