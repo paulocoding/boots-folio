@@ -40,6 +40,12 @@ em {
   color: #fff;
   font-style: normal; }
 
+iframe {
+  display: block;
+  margin: 10px auto;
+  width: 640px;
+  height: 360px; }
+
 .padL {
   padding-left: 10px; }
 
