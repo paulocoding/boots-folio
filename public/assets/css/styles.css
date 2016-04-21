@@ -22,6 +22,7 @@ body {
   background-position: center top;
   background-attachment: fixed;
   padding-top: 70px;
+  padding-bottom: 70px;
   min-height: 100%; }
 
 p {
@@ -29,16 +30,26 @@ p {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   line-height: 1.3em;
-  letter-spacing: 0.02em; }
+  letter-spacing: 0.02em;
+  margin-bottom: 2px; }
 
 h1, h2, h3 {
   color: #fff; }
 
-a {
-  color: #d2dde0; }
-  a:hover {
-    text-decoration: none;
-    color: #fff; }
+em {
+  color: #fff;
+  font-style: normal; }
+
+.padL {
+  padding-left: 10px; }
+
+a, a:visited {
+  color: #d2dde0;
+  text-decoration: none; }
+
+a:hover, a:active {
+  text-decoration: none;
+  color: #E57800; }
 
 div.under-title {
   width: 100%;
@@ -55,7 +66,8 @@ footer {
   width: 100%;
   padding: 8px 0 6px 0;
   text-align: center;
-  color: #a6a9b7; }
+  color: #a6a9b7;
+  z-index: 999; }
   footer ul {
     list-style: none;
     display: inline; }
@@ -120,7 +132,7 @@ footer {
     width: 100%;
     height: 100%;
     text-align: center;
-    padding: 20px 5px;
+    padding: 25% 5px;
     position: absolute;
     top: 0;
     z-index: 2;
@@ -132,7 +144,7 @@ footer {
     .thumb .thumb-over a {
       display: block;
       width: 40%;
-      margin: 40px auto 0 auto;
+      margin: 10% auto 0 auto;
       padding: 4px;
       background-color: #E57800;
       border: 2px solid #fff;
@@ -169,7 +181,14 @@ ul.nav.navbar-nav {
 
 @media only screen and (max-width: 992px) {
   .thumb {
-    width: 33.3333%; } }
+    width: 33.3333%; }
+  footer {
+    padding: 4px 0 2px 0; }
+    footer ul li {
+      font-size: 0.8em; }
+      footer ul li img {
+        height: 20px;
+        padding: 0 10px; } }
 
 @media only screen and (max-width: 720px) {
   .mybox {
@@ -177,7 +196,12 @@ ul.nav.navbar-nav {
 
 @media only screen and (max-width: 600px) {
   .thumb {
-    width: 50%; } }
+    width: 50%; }
+  footer {
+    padding: 4px 0 2px 0; }
+    footer ul li img {
+      height: 20px;
+      margin: 5px; } }
 
 @media only screen and (max-width: 380px) {
   .thumb {
@@ -229,3 +253,22 @@ ul.nav.navbar-nav {
     margin-bottom: 20px; }
     .carousel-content div.figure img {
       margin-top: 5px; } }
+
+#overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1031;
+  top: 0;
+  background-color: rgba(25, 25, 35, 0.9); }
+  #overlay img {
+    display: block;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto auto; }
