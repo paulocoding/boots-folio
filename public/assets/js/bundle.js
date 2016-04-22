@@ -11,18 +11,31 @@ var main = function () {
   // gets the order number of a particular thumbnail
   var getThumbOrder = function (item) {
     for(var i = 0; i<$allThumbs.length; i++){
-      if($allThumbs[i] === item){
+      if($allThumbs[i] === item) {
         return i;
       }
     }
     return -1;
   };
+  
   var drawItem = function() {
-    currentItem = $allThumbs[currentItemOrder].children[1].children[1].href;
-    var imgtag = '<img src="' + currentItem +'" >';
-    $overlay.html(imgtag);    
-    $overlay.children('img').hide().fadeIn(400);
+    if($($allThumbs[currentItemOrder].children[1]).hasClass('typeimage')) {
+      // its an image
+      currentItem = $allThumbs[currentItemOrder].children[1].children[1].href;
+      var imgtag = '<img src="' + currentItem +'" >';
+      $overlay.html(imgtag);    
+      $overlay.children('img').hide().fadeIn(400);
+    } else if($($allThumbs[currentItemOrder].children[1]).hasClass('typevideo')) {
+      // its a video (iframe)
+      var $wrapper = $('<div class="videoWrapper"></div>');
+      var $currentItem = $($allThumbs[currentItemOrder].children[1].children[2]).clone();
+      $overlay.html('');
+      $currentItem.removeClass('hidden');
+      $wrapper.append($currentItem);
+      $overlay.append($wrapper);     
+    }
   }
+  
   var nextItem = function(){
     if(currentItemOrder+1 < $allThumbs.length){
       currentItemOrder++;
@@ -31,6 +44,7 @@ var main = function () {
     }
     drawItem();
   }
+  
   var prevItem = function(){
     if(currentItemOrder > 0){
       currentItemOrder--;
