@@ -305,17 +305,9 @@ ul.nav.navbar-nav {
   #overlay .videoWrapper iframe {
     position: absolute;
     top: 0;
-    left: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    left: 0;
     width: 100%;
-    height: 100%;
-    max-width: 800px;
-    max-height: 450px; }
+    height: 100%; }
 
 .closeOverlay {
   display: block;
@@ -338,3 +330,22 @@ ul.nav.navbar-nav {
   transition: opacity 250ms linear; }
   .closeOverlay:hover {
     opacity: 0.8; }
+
+@media only screen and (min-width: 800px) {
+  #overlay .videoWrapper {
+    display: block;
+    position: relative;
+    padding-bottom: 0;
+    padding-top: 0;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    height: 450px;
+    width: 800px; }
+  #overlay .videoWrapper iframe {
+    position: relative;
+    display: block;
+    height: 450px;
+    width: 800px; } }
