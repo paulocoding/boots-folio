@@ -141,7 +141,7 @@ footer {
     width: 100%;
     height: 100%;
     text-align: center;
-    padding: 25% 5px;
+    padding: 0 5px;
     position: absolute;
     top: 0;
     z-index: 2;
@@ -150,8 +150,16 @@ footer {
     transition: all .3s ease-in-out; }
     .thumb .thumb-over:hover {
       opacity: 1; }
+    .thumb .thumb-over h2 {
+      margin-top: 30%; }
     .thumb .thumb-over a {
       display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -20%);
+          -ms-transform: translate(-50%, -20%);
+              transform: translate(-50%, -20%);
       width: 40%;
       margin: 10% auto 0 auto;
       padding: 4px;
@@ -189,6 +197,8 @@ ul.nav.navbar-nav {
     transition: border 100ms; }
 
 @media only screen and (max-width: 992px) {
+  h2 {
+    font-size: 1.6em; }
   .thumb {
     width: 33.3333%; }
   footer {
