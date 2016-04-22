@@ -32,3 +32,23 @@
     height: 100%;
   }
 }
+.closeOverlay {
+  display: block;
+  position: fixed;
+  top: 3%;
+  right: 6%;
+  transform: translateX(-50%);
+  width: 8%;
+  height: auto;
+  max-height: 50px;
+  max-width: 50px;
+  min-height: 42px;
+  min-width: 42px;
+  z-index: 1032;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 250ms linear;
+  &:hover{
+    opacity: 0.8;    
+  }
+}

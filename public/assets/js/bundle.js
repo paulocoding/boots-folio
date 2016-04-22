@@ -7,6 +7,9 @@ var main = function () {
   var currentItem = '';
   var currentItemOrder = 0;
   var $overlay = $('#overlay');
+  var $closeOverlayBtn = $('.closeOverlay');
+  
+  $closeOverlayBtn.hide();
   
   // gets the order number of a particular thumbnail
   var getThumbOrder = function (item) {
@@ -60,13 +63,21 @@ var main = function () {
     currentItemOrder = getThumbOrder($($(this).parent()).parent()[0]);
     drawItem();
     $overlay.fadeIn(300);
+    $closeOverlayBtn.show(200);
   });
 
   $overlay.click(function () {
     $overlay.hide();
     $overlay.html('');
-  }
-  );
+    $closeOverlayBtn.hide();
+  });
+  
+  $closeOverlayBtn.click(function () {
+    $overlay.hide();
+    $overlay.html('');
+    $closeOverlayBtn.hide();
+  });
+  
   $('html').keydown(function( event ) {
     if($allThumbs.length>0){
       if(event.which === 39){
